@@ -96,7 +96,9 @@
           </ul>
         </div>
       </nav>
-      <router-view></router-view>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
@@ -110,6 +112,12 @@ export default {
 </script>
 
 <style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .2s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
   .vertical-nav {
     min-width: 17rem;
     width: 17rem;
