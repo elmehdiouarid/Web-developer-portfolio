@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <h1 >This is an Home page</h1>
+  <div class="blog">
+    <h1>This is an blog page</h1>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 };
 </script>
 <style>
-  .home{
+  .blog{
     text-align: center;
     padding-top: 20px;
   }

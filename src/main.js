@@ -11,7 +11,6 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 library.add(faUserSecret);
@@ -19,7 +18,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueMeta, {
   refreshOnceOnNavigation: true,
 });
-
 
 new Vue({
   router,

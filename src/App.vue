@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SidebarNav></SidebarNav>
+   <Global></Global>
   </div>
 </template>
 
@@ -19,10 +19,10 @@
   }
 </style>
 <script>
-import SidebarNav from './components/SidebarNav.vue';
+import Global from './components/Global.vue';
 
 export default {
-  components: { SidebarNav },
+  components: { Global },
   metaInfo: {
     title: 'OUARID EL MEHDI',
   },
