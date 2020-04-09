@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="vertical-nav " id="sidebar">
-      <div class="py-4 px-3 mb-4" >
+      <div class="py-4 px-3 mb-4 font-italic" >
         <div class="media d-flex align-items-center" style="padding-top: 15px">
           <img src="../assets/logo1.png" alt="..." width="65"
                class="mr-3 rounded-circle img-thumbnail shadow-sm">
           <div class="media-body">
             <h4 class="m-0">Ouarid El Mehdi</h4>
-            <p class="mb-0" style="color: #F76C6C;">Web developer</p>
+            <p class="mb-0" style="color: #2EAEDE;">Web developer</p>
           </div>
         </div>
       </div>
@@ -40,42 +40,35 @@
           </a>
         </router-link>
       </ul>
-
-        <p class="text-white font-weight-bold text-uppercase px-3 small py-4 mb-0" id="follow">
+        <p class=" font-weight-bold font-italic
+        text-uppercase px-3 small py-4 mb-0" id="follow" style="color: #434651;">
           Follow Me:
         </p>
-        <p style="font-size: 13px; color: white; font-weight: bold">
-          <img src="../assets/gmail.png"
-               style="width: 30px; height: 30px; margin-left: 10px">
-          elmehdi.ouariid@gmail.com
-        </p>
-        <p style="font-size: 13px; color: white; font-weight: bold">
-          <img src="../assets/fb-icon.png" style="width: 30px; height: 30px; margin-left: 10px">
-          /elmehdi.ouarid
-        </p>
-        <p style="font-size: 13px; color: white; font-weight: bold">
-        <img src="../assets/insta-icon.png" style="width: 38px; height: 38px; margin-left: 5px">
-        /elmehdi.ouariid
-      </p>
-        <p style="font-size: 13px; color: white; font-weight: bold">
-          <img src="../assets/Lin-icon.png" style="width: 30px; height: 30px; margin-left: 10px">
-          /elmehdiouarid
-        </p>
-        <p style="font-size:12px; color: #F76C6C; padding-left: 10px; padding-top: 70px ">
-          © 2020 - ElMehdi Ouarid Portfolio
-        </p>
+      <div class="template">
+        <img class="reseauS" src="../assets/reseau.png" width="300" height="300px">
+        <h4 class="lien"><a class="styleLien" href="#">/elmehdi.Ouarid</a></h4>
+        <h4 class="lien2"><a class="styleLien" href="#">/elmehdi.Ouarid</a></h4>
+        <h4 class="lien3"><a class="styleLien" href="#">+212682361632</a></h4>
+        <h4 class="lien4"><a class="styleLien" href="#">/Mehdi.Ouarid</a></h4>
+        <h4 class="lien5"><a class="styleLien" href="#">/elmehdi.ouariid</a></h4>
+        <h4 class="lien6"><a class="styleLien" href="#">/elmehdi.ouarid</a></h4>
+      </div>
     </div>
     <!-- End vertical navbar -->
 
 
     <!-- Page content holder -->
-    <div class="page-content p-3" id="content">
+    <div class="page-content" id="content">
       <nav class="navbar navbar-expand-lg  ">
+        <div class="container font-italic text-uppercase font-weight-bold" style="color:#434651;">
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <b-icon icon="justify" style="color: #434651 !important;"></b-icon>
         </button>
+          Hi , Everyone
+          <b-icon icon="laptop" style="color: #434651 !important;"></b-icon>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center;">
           <ul class="navbar-nav ">
             <router-link to="/" tag="li" class="nav-item nvitem2">
@@ -96,10 +89,10 @@
           </ul>
         </div>
       </nav>
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
     </div>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -127,12 +120,12 @@ export default {
     left: 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
-    background-color: #24305E !important;
+    background-color: #FAFAFA ;
   }
   h4{
     font-size: 17px;
     font-weight: bold;
-    color: #ffffff;
+    color: #434651;
   }
   .side{
     text-align: center;
@@ -148,7 +141,7 @@ export default {
     margin-bottom: 10px
   }
   .nvlink{
-      color: #ffffff;
+      color: #434651;
       letter-spacing: 2px;
   }
   .page-content {
@@ -157,34 +150,82 @@ export default {
     transition: all 0.4s;
   }
   .nvitem:hover {
-    background-color: #F76C6C;
+    background-color: #2EAEDE;
     border-radius: 6px;
     transition: 1s;
   }
   #follow{
     text-align: center;
     font-size: 18px;
-    font-family: Courier Prime, monospace;
     padding-top: 10px;
+    margin-top: -1rem;
   }
   .navbar{
-     background-color: #A8D0E6;
-     border-radius: 60px;
+    background-color: #FAFAFA !important;
      width: 40%;
      margin-left: 30%;
+    display: none;
   }
   .nvitem2{
     font-size: 15px;
     font-weight: bold;
   }
   .nvlink2{
-    color: #24305E;
+    color: #434651;
     margin-right: 15px;
     font-family: "Lao UI";
   }
-  .nvlink2:hover {
-    border-top: 2px solid #F76C6C;
+  .reseauS{
+    margin-left: -1.5rem;
+    margin-top: -1rem;
   }
+  .template{
+    position: absolute;
+  }
+  .lien{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -17.70rem;
+  }
+  .lien2{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -16.40rem;
+  }
+  .lien3{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -14.90rem;
+  }
+  .lien4{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -13.50rem;
+  }
+  .lien5{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -11.90rem;
+  }
+  .lien6{
+    position: relative;
+    font-size: 13px;
+    left: 96px;
+    top: -10.60rem;
+  }
+  .styleLien{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .nvlink2:hover {
+    border-bottom: 2px solid #2EAEDE;
+  }
+
   /* for toggle behavior */
 
   #sidebar.active {
@@ -207,6 +248,7 @@ export default {
       border-radius: 0px;
       width: 100%;
       margin-left: 0;
+      display: block;
     }
     #content {
       width: 100%;
@@ -218,9 +260,7 @@ export default {
     }
   }
   body {
-    background: #599fd9;
-    background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
-    background: linear-gradient(to right, #599fd9, #c2e59c);
+    background: #ffffff;
     min-height: 100vh;
     overflow-x: hidden;
   }
