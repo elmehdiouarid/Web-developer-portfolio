@@ -50,6 +50,7 @@ export default {
     position: relative;
     left: 10%;
     border: 1px solid #2EAEDE;
+    color: #2EAEDE;
   }
   .btn:hover{
     background-color: #2EAEDE;
