@@ -1,10 +1,16 @@
 <template>
   <div class="contenthome">
-    <h5 class="title1">Hello , I am </h5>
-    <h1 class="titre2">Mehdi Ouarid</h1>
-    <h4 class="titre3">A Web developer , From Morocco .</h4>
-    <button type="button" class="btn btn-lg">Download " CV " </button>
-    <img src="../assets/pngwing.com.png" class="backgd">
+    <div class="row home-row justify-content-around">
+      <div class="col-md-8 p-2">
+        <h5 class="title1">Hello , I am </h5>
+        <h1 class="titre2">Mehdi Ouarid</h1>
+        <h4 class="titre3">A Web developer , From Morocco .</h4>
+        <button type="button" class="btn mt-5">Download " CV " </button>
+      </div>
+      <div class="col-md-4 p-3">
+        <img src="../assets/pngwing.com.png" class="backgd">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,38 +23,32 @@ export default {
 </script>
 <style>
   .contenthome{
-    text-align: left;
     background-color: #FAFAFA;
     width: calc(100% - 17rem);
-    margin-left: 17rem;
+    margin-left: auto;
     height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    justify-content: spa;
+  }
+  .home-row {
+    height: fit-content;
+    align-items: center;
   }
   .title1{
-    position: relative;
-    top: 28%;
-    left: 10%;
-    width: 90%;
     font-size: xx-large;
     color: #2EAEDE;
     letter-spacing: 1px;
+    white-space: nowrap;
   }
   .titre2{
-    position: relative;
-    top: 29%;
-    left: 10%;
-    width: 90%;
-    font-size: 100px;
-  }
-  .titre3{
-    position: relative;
-    top: 28%;
-    left: 10%;
-    width: 90%;
+    white-space: nowrap;
+    font-size: 5.5vw;
+    transition: linear .3s;
   }
   .btn{
-    position: relative;
-    left: 10%;
     border: 1px solid #2EAEDE;
     color: #2EAEDE;
   }
@@ -57,9 +57,9 @@ export default {
     color: #ffffff;
   }
   .backgd{
-    position: relative;
-    width: 295px;
-    left: 55%;
+    width: 100%;
+    max-width: 295px;
+    margin: auto;
   }
   @media (max-width: 768px){
     .contenthome{

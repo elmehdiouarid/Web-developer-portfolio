@@ -7,13 +7,11 @@
 <script>
 // @ is an alias to /src
 
-export default {
-
-};
+export default {};
 </script>
 <style>
-  .blog{
-    text-align: center;
-    padding-top: 20px;
-  }
+.blog {
+  text-align: center;
+  padding-top: 20px;
+}
 </style>
