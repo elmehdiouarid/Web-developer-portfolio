@@ -1,7 +1,7 @@
 <template>
   <div class="contenthome">
     <div class="row home-row justify-content-around">
-      <div class="col-md-8 p-2">
+      <div class="col-md-8 p-5">
         <h5 class="title1">Hello , I am </h5>
         <h1 class="titre2">Mehdi Ouarid</h1>
         <h4 class="titre3">A Web developer , From Morocco .</h4>
@@ -31,7 +31,6 @@ export default {
     display: flex;
     justify-content: center;
     padding-top: 20vh;
-    justify-content: spa;
   }
   .home-row {
     height: fit-content;
@@ -65,7 +64,7 @@ export default {
     .contenthome{
       width: 100%;
       margin-left: 0;
-      height: 94vh;
+      height:100%;
     }
     .titre2{
       font-size: 50px;
@@ -76,10 +75,9 @@ export default {
     }
     .backgd{
       position: relative;
-      width: 110px;
-      left: 10%;
-      margin-top: 60%;
-      margin-left: 30px;
+      width: 170px;
+      left: 50%;
+      top: -8rem;
     }
   }
 </style>
