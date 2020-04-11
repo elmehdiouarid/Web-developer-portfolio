@@ -5,9 +5,11 @@
     <div class="container">
       <div class="row p-5">
         <div v-for="projet in Projets" :key="projet.id" :title="projet.title"
+             :para="projet.paragraph"
              class="col-md-3 col-sm-12 text-center post" >
           <img v-bind:src="projet.img" width="250px" height="250px" class="img">
-          <router-link :to="{ name: 'info', params: { id: projet.id } }">
+          <router-link :to="{ name: 'info', params: { id: projet.id , title: projet.title
+          , para: projet.paragraph , img: projet.img  } }">
           <a href="#" class="btn btn-primary readmore">Read More</a>
           </router-link>
         </div>
@@ -24,11 +26,6 @@ export default {
     return {
       Projets: projetDta,
     };
-  },
-  methods: {
-    info(id) {
-      console.log(id);
-    },
   },
 };
 </script>

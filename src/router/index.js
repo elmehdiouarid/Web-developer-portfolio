@@ -36,7 +36,7 @@ const routes = [
     component: Contact,
   },
   {
-    path: '/info/:id',
+    path: '/info',
     name: 'info',
     component: info,
     props: true,
