@@ -5,6 +5,7 @@ import About from '../views/About.vue';
 import Portfolio from '../views/Portfolio.vue';
 import Blog from '../views/Blog.vue';
 import Contact from '../views/Contact.vue';
+import info from '../views/info.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,12 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact,
+  },
+  {
+    path: '/info/:id',
+    name: 'info',
+    component: info,
+    props: true,
   },
 ];
 

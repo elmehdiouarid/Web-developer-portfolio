@@ -4,21 +4,12 @@
     <div class="ligne"></div>
     <div class="container">
       <div class="row p-5">
-        <div class="col-md-3 col-sm-12 text-center post" >
-          <img src="../assets/projetTest.jpg" width="250px" height="250px" class="img">
+        <div v-for="projet in Projets" :key="projet.id" :title="projet.title"
+             class="col-md-3 col-sm-12 text-center post" >
+          <img v-bind:src="projet.img" width="250px" height="250px" class="img">
+          <router-link :to="{ name: 'info', params: { id: projet.id } }">
           <a href="#" class="btn btn-primary readmore">Read More</a>
-        </div>
-        <div class="col-md-3 col-sm-12 text-center post">
-          <img src="../assets/projet2.png" width="250px" height="250px" class="img">
-          <a href="#" class="btn btn-primary readmore">Read More</a>
-        </div>
-        <div class="col-md-3 col-sm-12 text-center post">
-          <img src="../assets/projet3.jpg" width="250px" height="250px" class="img">
-          <a href="#" class="btn btn-primary readmore">Read More</a>
-        </div>
-        <div class="col-md-3 col-sm-12 text-center post">
-          <img src="../assets/Projet4.jpg" width="250px" height="250px" class="img">
-          <a href="#" class="btn btn-primary readmore">Read More</a>
+          </router-link>
         </div>
       </div>
       </div>
@@ -26,10 +17,19 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import projetDta from '../data2.json';
 
 export default {
-
+  data() {
+    return {
+      Projets: projetDta,
+    };
+  },
+  methods: {
+    info(id) {
+      console.log(id);
+    },
+  },
 };
 </script>
 <style>
