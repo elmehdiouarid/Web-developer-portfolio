@@ -4,7 +4,7 @@
       <div class="py-4 px-3 mb-4 font-italic" >
         <div class="media d-flex align-items-center" style="padding-top: 15px">
           <img src="../assets/logo1.png" alt="..." width="65"
-               class="mr-3 rounded-circle img-thumbnail shadow-sm">
+              class="mr-3 rounded-circle img-thumbnail shadow-sm">
           <div class="media-body">
             <h4 class="m-0">Ouarid El Mehdi</h4>
             <p class="mb-0" style="color: #2EAEDE;">Web developer</p>
@@ -147,6 +147,10 @@ export default {
   .nvlink{
       color: #434651;
       letter-spacing: 2px;
+      transition: .3s;
+  }
+  .nvlink:hover {
+    color: white;
   }
   .page-content {
     width: calc(100% - 17rem);
@@ -157,6 +161,7 @@ export default {
     background-color: #2EAEDE;
     border-radius: 6px;
     transition: 1s;
+    color: white!important;
   }
   #follow{
     text-align: center;
@@ -195,6 +200,7 @@ export default {
   }
   .nvlink2:hover {
     border-bottom: 2px solid #2EAEDE;
+    color: white;
   }
 
   /* for toggle behavior */
