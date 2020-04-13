@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="global">
     <div class="vertical-nav " id="sidebar">
       <div class="py-4 px-3 mb-4 font-italic" >
         <div class="media d-flex align-items-center" style="padding-top: 15px">
@@ -29,11 +29,6 @@
             Portfolio
           </a>
         </router-link>
-        <router-link to="/Blog" tag="li" class="nav-item nvitem">
-          <a class="nav-link font-italic nvlink " >
-            Blog
-          </a>
-        </router-link>
         <router-link to="/contact" tag="li" class="nav-item nvitem">
           <a class="nav-link font-italic nvlink " >
             Contact
@@ -45,14 +40,12 @@
           Follow Me:
         </p>
       <div class="template">
-        <img class="reseauS" src="../assets/reseau.png" width="300" height="300px">
-        <h4 class="lien"><a class="styleLien" href="#">/elmehdi.Ouarid</a></h4>
-        <h4 class="lien2"><a class="styleLien" href="#">/elmehdi.Ouarid</a></h4>
-        <h4 class="lien3"><a class="styleLien" href="#">+212682361632</a></h4>
-        <h4 class="lien4"><a class="styleLien" href="#">/Mehdi.Ouarid</a></h4>
-        <h4 class="lien5"><a class="styleLien" href="#">/elmehdi.ouariid</a></h4>
-        <h4 class="lien6"><a class="styleLien" href="#">/elmehdi.ouarid</a></h4>
+        <a href="https://www.linkedin.com/in/elmehdiouarid/" target="_blank"><img src="../assets/Link.png" width="34px" height="34px" class="imgl"></a>
+        <a href="https://www.instagram.com/elmehdi.ouarid/" target="_blank"><img src="../assets/insta.png" width="34px" height="34px" class="imgl"></a>
+        <a href="https://twitter.com/OuaridMehdi" target="_blank"><img src="../assets/twiter.png" width="34px" height="34px" class="imgl"></a>
+        <a href="https://github.com/elmehdiouarid" target="_blank"><img src="../assets/github.png" width="34px" height="34px" class="imgl"></a>
       </div>
+      <p class="copy">copyright © 2020 - El Mehdi Ouarid</p>
     </div>
     <!-- End vertical navbar -->
 
@@ -80,13 +73,17 @@
             <router-link to="/portfolio" tag="li" class="nav-item nvitem2">
               <a class="nav-link nvlink2" >Portfolio</a>
             </router-link>
-            <router-link to="/blog" tag="li" class="nav-item nvitem2">
-              <a class="nav-link nvlink2" >Blog</a>
-            </router-link>
             <router-link to="/contact" tag="li" class="nav-item nvitem2">
               <a class="nav-link nvlink2">Contact</a>
             </router-link>
           </ul>
+          <p class="text-center font-weight-bold">Follow Me :</p>
+          <div class="Sociaux">
+          <a href="https://www.linkedin.com/in/elmehdiouarid/" target="_blank"><img src="../assets/Link.png" width="34px" height="34px" class="imgl"></a>
+          <a href="https://www.instagram.com/elmehdi.ouarid/" target="_blank"><img src="../assets/insta.png" width="34px" height="34px" class="imgl"></a>
+          <a href="https://twitter.com/OuaridMehdi" target="_blank"><img src="../assets/twiter.png" width="34px" height="34px" class="imgl"></a>
+          <a href="https://github.com/elmehdiouarid" target="_blank"><img src="../assets/github.png" width="34px" height="34px" class="imgl"></a>
+          </div>
         </div>
       </nav>
     </div>
@@ -111,6 +108,13 @@ export default {
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
+  .global{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
   .vertical-nav {
     min-width: 17rem;
     width: 17rem;
@@ -129,7 +133,7 @@ export default {
   }
   .side{
     text-align: center;
-    padding-top: 15px;
+    padding-top: 100px;
     padding-left: 55px;
     padding-bottom: 15px;
   }
@@ -158,7 +162,7 @@ export default {
     text-align: center;
     font-size: 18px;
     padding-top: 10px;
-    margin-top: -1rem;
+    margin-top: 5rem;
   }
   .navbar{
     background-color: #FAFAFA !important;
@@ -175,52 +179,19 @@ export default {
     margin-right: 15px;
     font-family: "Lao UI";
   }
-  .reseauS{
-    margin-left: -1.5rem;
-    margin-top: -1rem;
-  }
   .template{
     position: absolute;
+    padding-left: 20%;
   }
-  .lien{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -17.70rem;
+  .imgl{
+    margin-right: 10px;
   }
-  .lien2{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -16.40rem;
-  }
-  .lien3{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -14.90rem;
-  }
-  .lien4{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -13.50rem;
-  }
-  .lien5{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -11.90rem;
-  }
-  .lien6{
-    position: relative;
-    font-size: 13px;
-    left: 96px;
-    top: -10.60rem;
-  }
-  .styleLien{
-    text-decoration: none;
-    color: #ffffff;
+  .copy{
+    position: absolute;
+    top: 97%;
+    font-size: 15px;
+    left: 5%;
+    font-weight: 300;
   }
   .nvlink2:hover {
     border-bottom: 2px solid #2EAEDE;
@@ -236,7 +207,11 @@ export default {
     width: 100%;
     margin: 0;
   }
-
+  .footer{
+    position: absolute;
+    top:97%;
+    display: none;
+  }
   @media (max-width: 768px) {
     #sidebar {
       margin-left: -17rem;
@@ -257,6 +232,9 @@ export default {
     #content.active {
       margin-left: 17rem;
       width: calc(100% - 17rem);
+    }
+    .Sociaux{
+      padding-left: 28%;
     }
   }
   body {

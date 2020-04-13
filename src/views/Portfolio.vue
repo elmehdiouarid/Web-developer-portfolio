@@ -3,15 +3,23 @@
     <h1 class="about">PORTFOLIO</h1>
     <div class="ligne"></div>
     <div class="container">
-      <div class="row p-5">
+      <div class="row p-4">
         <div v-for="projet in Projets" :key="projet.id" :title="projet.title"
              :para="projet.paragraph"
-             class="col-md-3 col-sm-12 text-center post" >
-          <img v-bind:src="projet.img" width="250px" height="250px" class="img">
+             class="col-md-6 col-sm-12 text-center post" >
+          <img v-bind:src="projet.img" width="450px" height="260px" class="img">
           <router-link :to="{ name: 'info', params: { id: projet.id , title: projet.title
           , para: projet.paragraph , img: projet.img  } }">
-          <a href="#" class="btn btn-primary readmore">Read More</a>
+          <a href="#" class="btn btn-primary text-white readmore">Read More</a>
           </router-link>
+          <p class="h4 mb-2 like">
+            <b-icon icon="heart-fill" variant="danger"></b-icon>
+            234
+          </p>
+          <p class="h4 mb-2 watch">
+            1256
+            <b-icon icon="eye-fill" variant="success"></b-icon>
+          </p>
         </div>
       </div>
       </div>
@@ -47,24 +55,39 @@ export default {
     position: relative;
     left: 46.4%;
   }
+  .post{
+    margin-bottom: 30px;
+  }
   .readmore{
-    position: relative;
-    top:-9rem;
-    left: 4%;
+    position: absolute;
+    top:7rem;
+    left: 30%;
     background-color: #2EAEDE;
     color: #000000;
     display: none;
   }
   .img{
-    border: 0.5px solid #2EAEDE;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  .like{
+    position: absolute;
+    left: 10%;
+    top: 88%;
+    font-size: 20px;
+  }
+  .watch{
+    position: absolute;
+    left: 77%;
+    top: 88%;
+    font-size: 20px;
   }
   .post:hover .readmore{
     display: block;
     width: 150px;
-    left: 20%;
+    left: 37%;
   }
   .post:hover .img{
-    opacity: 0.5;
+    opacity: 0.3;
   }
   @media (max-width: 768px) {
     .cotentportfolio {
@@ -78,8 +101,14 @@ export default {
     .post:hover .readmore{
       display: block;
       width: 150px;
-      left: 28%;
-      top: -11rem;
+      left: 31%;
+      top: 70px;
+    }
+    .img{
+      width: 90%;
+    }
+    .watch{
+      left: 73%;
     }
   }
 </style>

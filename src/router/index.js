@@ -3,7 +3,6 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Portfolio from '../views/Portfolio.vue';
-import Blog from '../views/Blog.vue';
 import Contact from '../views/Contact.vue';
 import info from '../views/info.vue';
 
@@ -24,11 +23,6 @@ const routes = [
     path: '/portfolio',
     name: 'Portfolio',
     component: Portfolio,
-  },
-  {
-    path: '/blog',
-    name: 'Blog',
-    component: Blog,
   },
   {
     path: '/contact',

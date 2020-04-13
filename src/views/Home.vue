@@ -5,7 +5,9 @@
         <h5 class="title1">Hello , I am </h5>
         <h1 class="titre2">Mehdi Ouarid</h1>
         <h4 class="titre3">A Web developer , From Morocco .</h4>
-        <button type="button" class="btn mt-5">Download " CV " </button>
+        <a href="../cv/file.pdf">
+         <button type="button" class="btn mt-5">Download " CV " </button>
+        </a>
       </div>
       <div class="col-md-4 p-3">
         <img src="../assets/pngwing.com.png" class="backgd">
@@ -15,7 +17,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
 
